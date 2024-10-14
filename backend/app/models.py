@@ -116,6 +116,8 @@ class NewPassword(SQLModel):
 
 from datetime import datetime
 # 新建一个角色表
+# 新建一个bool类型的字段
+# 新建一个日期类型的字段
 class Role(SQLModel, table=True):
     role_id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
     role_name: str = Field(max_length=255)
@@ -124,7 +126,7 @@ class Role(SQLModel, table=True):
     create_by: str = Field(max_length=255)
     created_at: datetime =  Field()
     update_by: str = Field(max_length=255)
-    # update_time: datetime = Field(default=datetime.now)
+    update_time: datetime = Field(default=datetime.now)
     remark: str = Field(max_length=255)
     
 # 新建一个用户和角色的关联表
