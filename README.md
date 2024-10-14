@@ -238,7 +238,7 @@ Check the file [release-notes.md](./release-notes.md).
 
 The Full Stack FastAPI Template is licensed under the terms of the MIT license.
 
-
+## 开发过程
 
 ```bash
 # 下载代码
