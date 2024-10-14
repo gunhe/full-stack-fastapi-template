@@ -237,3 +237,27 @@ Check the file [release-notes.md](./release-notes.md).
 ## License
 
 The Full Stack FastAPI Template is licensed under the terms of the MIT license.
+
+
+
+```bash
+# 下载代码
+git clone https://github.com/gunhe/full-stack-fastapi-template
+# 新建一个分支
+git branch test
+git checkout test
+# 进入到代码目录
+cd /opt/full-stack-fastapi-template/backend
+# 激活虚拟环境
+source .venv/bin/activate
+# 启动文件
+fastapi run --reload app/main.py
+# 添加一个bool类型的字段
+# 添加一个datetime类型的字段
+# 修改数据库结构
+# 迁移数据库
+alembic revision --autogenerate -m "XXX"
+alembic upgrade head
+# 提交代码到仓库
+git push
+```
