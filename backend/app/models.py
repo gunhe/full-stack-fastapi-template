@@ -112,3 +112,24 @@ class TokenPayload(SQLModel):
 class NewPassword(SQLModel):
     token: str
     new_password: str = Field(min_length=8, max_length=40)
+
+
+from datetime import datetime
+# 新建一个角色表
+class Role(SQLModel, table=True):
+    role_id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    role_name: str = Field(max_length=255)
+    status: bool = True
+    del_flag: str = Field(max_length=255)
+    create_by: str = Field(max_length=255)
+    created_at: datetime =  Field()
+    update_by: str = Field(max_length=255)
+    # update_time: datetime = Field(default=datetime.now)
+    remark: str = Field(max_length=255)
+    
+# 新建一个用户和角色的关联表
+# 每个表都必须有一个主键
+class User_Role(SQLModel, table=True):
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    user_id: uuid.UUID = Field()
+    role_id: uuid.UUID = Field()
