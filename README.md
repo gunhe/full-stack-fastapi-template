@@ -261,3 +261,9 @@ alembic upgrade head
 # 提交代码到仓库
 git push
 ```
+
+##  后端接口
+- 在这里完善如何添加一个crud的后端api
+
+## 前端页面
+- 在这里完善如何添加一个crud的后端api对应的前端页面
