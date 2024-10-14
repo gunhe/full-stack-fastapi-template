@@ -129,6 +129,7 @@ class Role(SQLModel, table=True):
     update_time: datetime = Field(default=datetime.now)
     remark: str = Field(max_length=255)
     
+    
 # 新建一个用户和角色的关联表
 # 每个表都必须有一个主键
 class User_Role(SQLModel, table=True):
